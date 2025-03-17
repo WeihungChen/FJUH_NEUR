@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="Shortcut Icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./files/main.css">
+    <script type="module" src="./files/main.js"></script>
+    <title>FJUH NEUR Meetings Manager</title>
+</head>
+<body>
+  <div id="main-form">
+    <button id="refresh-btn" class="form-control">重新整理</button>
+    <div>
+      <div>
+        <table id="myTable">
+          <header>
+            <tr>
+              <td class="myMonth"><input type="month" id="startMonth"></td>
+              <td></td>
+              <td class="myMonth"><input type="month" id="endMonth"></td>
+            </tr>
+            <tr>
+              <th>時間</th>
+              <th>會議</th>
+              <th>地點</th>
+            </tr>
+          </header>
+          <tbody id="meetings"></tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <button id="btn_submit">提交</button>
+    </div>
+    <div>
+      <button id="new-btn" class="form-control">新增</button>
+      <a id="success_message">提交成功</a>
+    </div>
+
+    <div id="modal_modify" class="modal">
+      <div class="modal-content">
+          <div class="modal-header" id="md_close_modify">
+              x
+          </div>
+          <div class="modal-body">
+            <div class="modal-fixed">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>時間：</th>
+                    <td><input type="datetime-local" id="m_time" class="mmm"></td>
+                  </tr>
+                  <tr>
+                    <th>會議：</th>
+                    <td><input type="text" id="m_name" class="mmm"></td>
+                  </tr>
+                  <tr>
+                    <th>地點：</th>
+                    <td><input type="text" id="m_position" class="mmm"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
